@@ -10,14 +10,21 @@ import {
 } from "@nextui-org/navbar";
 import { Link } from "@nextui-org/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useReducer } from "react";
 
 const NavbarUI = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
   const items = ["about", "projects", "contact"];
 
   return (
-    <Navbar shouldHideOnScroll onMenuOpenChange={setIsMenuOpen} isBordered>
+    <Navbar
+      shouldHideOnScroll
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+      isBordered
+      className="shadow-inner shadow-slate-500"
+    >
       <NavbarBrand>
         <Link href="/">
           <Image
@@ -57,7 +64,7 @@ const NavbarUI = () => {
             <Link
               href={`#${item}`}
               color="primary"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() => setIsMenuOpen((prev) => !prev)}
             >
               {item}
             </Link>

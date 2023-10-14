@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import dogicaFont from "next/font/local";
 import { Inter } from "next/font/google";
 import Footer from "./components/Footer";
 import { Providers } from "./components/Providers";
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
   title: "Tree's Portfolio",
   description: "Portfolio where I showcase my projects and tell about myself ",
 };
+const dogica = dogicaFont({ src: "./fonts/dogica.otf" });
 
 export default function RootLayout({
   children,
@@ -18,7 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} text-text relative `}>
+      <body
+        className={`${inter.className} ${dogica.className}  text-text relative `}
+      >
         <Providers>
           {/* <Navbar /> */}
           <NavbarUI />
