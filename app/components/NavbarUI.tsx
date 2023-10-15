@@ -38,6 +38,13 @@ const NavbarUI = () => {
       <NavbarContent className="hidden sm:flex gap-4" justify="end">
         <NavbarItem>
           <Link className="text-myprimary" href="#about">
+            {/* <Image
+              src="/assets/icons/Home.svg"
+              alt="about icon"
+              width={48}
+              height={48}
+              className="text-myprimary"
+            /> */}
             About
           </Link>
         </NavbarItem>

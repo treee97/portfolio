@@ -66,6 +66,7 @@ body {
 .section {
   @apply min-h-screen p-8 md:p-16 scroll-mt-12;
 }
+
 /* 
 * {
   outline: 4px solid red;
