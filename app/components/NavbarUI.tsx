@@ -8,9 +8,10 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/navbar";
+import ThemeButton from "./ThemeButton";
 import { Link } from "@nextui-org/link";
 import Image from "next/image";
-import { useState, useReducer } from "react";
+import { useState } from "react";
 
 const NavbarUI = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -23,7 +24,6 @@ const NavbarUI = () => {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       isBordered
-      className="shadow-inner shadow-slate-500"
     >
       <NavbarBrand>
         <Link href="/">
@@ -37,17 +37,17 @@ const NavbarUI = () => {
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="end">
         <NavbarItem>
-          <Link color="primary" href="#about">
+          <Link className="text-myprimary" href="#about">
             About
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="primary" href="#projects">
+          <Link className="text-myprimary" href="#projects">
             Projects
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="primary" href="#contact">
+          <Link className="text-myprimary" href="#contact">
             Contact
           </Link>
         </NavbarItem>
@@ -63,13 +63,16 @@ const NavbarUI = () => {
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
               href={`#${item}`}
-              color="primary"
+              className="text-mytext"
               onClick={() => setIsMenuOpen((prev) => !prev)}
             >
               {item}
             </Link>
           </NavbarMenuItem>
         ))}
+        <div className="mt-4">
+          <ThemeButton />
+        </div>
       </NavbarMenu>
     </Navbar>
   );
