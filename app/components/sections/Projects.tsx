@@ -4,7 +4,7 @@ import ProjectCard from "../ProjectCard";
 const Projects = () => {
   return (
     <div className="section" id="projects">
-      Projects <br />
+      <h2>Projects</h2>
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla
       consectetur repudiandae porro ipsa, illum enim dolor, nemo
       {projects.map((proj, index) => (

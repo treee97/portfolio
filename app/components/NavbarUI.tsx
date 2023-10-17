@@ -37,24 +37,24 @@ const NavbarUI = () => {
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="end">
         <NavbarItem>
-          <Link className="text-myprimary" href="#about">
+          <Link className="text-mytext" href="#about">
             {/* <Image
               src="/assets/icons/Home.svg"
               alt="about icon"
               width={48}
               height={48}
-              className="text-myprimary"
+              className="text-mytext"
             /> */}
             About
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-myprimary" href="#projects">
+          <Link className="text-mytext" href="#projects">
             Projects
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-myprimary" href="#contact">
+          <Link className="text-mytext" href="#contact">
             Contact
           </Link>
         </NavbarItem>

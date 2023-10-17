@@ -8,11 +8,13 @@ import {
   ModalFooter,
   useDisclosure,
 } from "@nextui-org/modal";
+
 import { Button } from "@nextui-org/button";
-import { title } from "process";
+
 interface Props {
   data: {
     title: string;
+    link: string;
     description: string;
     techStack: string[];
     picture: string;
@@ -47,6 +49,7 @@ const ProjectModal = ({ data }: Props) => {
             <>
               <ModalHeader className="flex flex-col gap-1">
                 {data.title}
+                {data.link}
               </ModalHeader>
               <ModalBody>
                 <p>{data.description}</p>
