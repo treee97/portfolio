@@ -64,10 +64,14 @@ body {
   background: rgb(81, 81, 81);
 }
 .section {
-  @apply min-h-screen p-8 md:p-16 scroll-mt-12;
+  @apply min-h-screen p-8 md:p-16 scroll-mt-12 flex flex-col items-center;
 }
 
+.title {
+  @apply text-2xl m-8;
+  /* text-left wont be applied bc everything is centered */
+}
 /* 
 * {
-  outline: 4px solid red;
+  border: 1px solid red;
 } */

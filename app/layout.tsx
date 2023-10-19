@@ -1,4 +1,4 @@
-import "./globals.css";
+import "./styles/globals.css";
 import type { Metadata } from "next";
 import dogicaPixelFont from "next/font/local";
 import { Inter } from "next/font/google";

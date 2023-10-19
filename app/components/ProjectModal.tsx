@@ -1,12 +1,10 @@
 "use client";
-
 import {
   Modal,
   ModalContent,
   ModalHeader,
   ModalBody,
   ModalFooter,
-  useDisclosure,
 } from "@nextui-org/modal";
 
 import { Button } from "@nextui-org/button";
@@ -19,14 +17,17 @@ interface Props {
     techStack: string[];
     picture: string;
   };
+  onOpen: () => void;
+  onClose: () => void;
+  isOpen: boolean;
 }
 
-const ProjectModal = ({ data }: Props) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+const ProjectModal = ({ data, isOpen, onClose }: Props) => {
+  // const { onClose } = useDisclosure();
 
   return (
     <>
-      <div className="flex flex-wrap gap-3">
+      {/* <div className="flex flex-wrap gap-3">
         <Button
           variant="flat"
           color="warning"
@@ -35,7 +36,7 @@ const ProjectModal = ({ data }: Props) => {
         >
           Open modal
         </Button>
-      </div>
+      </div> */}
       <Modal
         backdrop="blur"
         placement="center"

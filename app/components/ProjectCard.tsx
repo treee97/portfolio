@@ -1,6 +1,10 @@
+"use client";
+
+import Image from "next/image";
 import ProjectModal from "./ProjectModal";
 // We pass the data to the modal
-import Image from "next/image";
+import { useDisclosure } from "@nextui-org/modal";
+
 interface Props {
   data: {
     title: string;
@@ -10,25 +14,41 @@ interface Props {
     picture: string;
   };
 }
-const ProjectCard = ({ data }: Props) => {
-  return (
-    <div className=" h-[250px] w-[300px] border border-red-400 relative">
-      <span>{data.title}</span>
 
+const ProjectCard = ({ data }: Props) => {
+  const { onOpen, isOpen, onClose } = useDisclosure();
+
+  const onOpenModal = () => {
+    onOpen();
+  };
+  return (
+    <div
+      className="min-h-min min-w-full border-2 border-myprimary relative rounded-md cursor-pointer overflow-hidden hover:bg-black "
+      onClick={onOpenModal}
+    >
+      {/* <span>
+        {data.title}
+        <ProjectModal data={data} />
+      </span> */}
       <Image
         src={data.picture}
         alt="project thumbnail"
-        className="w-full h-40 border"
+        className="w-full h-auto border"
         width={1600}
         height={856}
       />
+
+      <ProjectModal
+        data={data}
+        onOpen={onOpen}
+        isOpen={isOpen}
+        onClose={onClose}
+      />
+
       {/* si la image es importada de manera estatica => ex img from ../etc/hi.png */}
       {/* add utility component somehow that will add an icon related to the technology used. */}
-      <ProjectModal data={data} />
     </div>
   );
 };
-//
-// z-index: 3; transform: translate(68px, 290px) scale(1); visibility: visible;
 
 export default ProjectCard;
