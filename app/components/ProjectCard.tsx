@@ -18,13 +18,10 @@ interface Props {
 const ProjectCard = ({ data }: Props) => {
   const { onOpen, isOpen, onClose } = useDisclosure();
 
-  const onOpenModal = () => {
-    onOpen();
-  };
   return (
     <div
       className="min-h-min min-w-full border-2 border-myprimary relative rounded-md cursor-pointer overflow-hidden hover:bg-black "
-      onClick={onOpenModal}
+      onClick={onOpen}
     >
       {/* <span>
         {data.title}
@@ -38,12 +35,7 @@ const ProjectCard = ({ data }: Props) => {
         height={856}
       />
 
-      <ProjectModal
-        data={data}
-        onOpen={onOpen}
-        isOpen={isOpen}
-        onClose={onClose}
-      />
+      <ProjectModal data={data} isOpen={isOpen} onClose={onClose} />
 
       {/* si la image es importada de manera estatica => ex img from ../etc/hi.png */}
       {/* add utility component somehow that will add an icon related to the technology used. */}

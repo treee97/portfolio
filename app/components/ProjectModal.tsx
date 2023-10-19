@@ -8,6 +8,8 @@ import {
 } from "@nextui-org/modal";
 
 import { Button } from "@nextui-org/button";
+import { Link } from "@nextui-org/link";
+import getIcon from "../utils/getIcon";
 
 interface Props {
   data: {
@@ -17,26 +19,13 @@ interface Props {
     techStack: string[];
     picture: string;
   };
-  onOpen: () => void;
   onClose: () => void;
   isOpen: boolean;
 }
 
 const ProjectModal = ({ data, isOpen, onClose }: Props) => {
-  // const { onClose } = useDisclosure();
-
   return (
     <>
-      {/* <div className="flex flex-wrap gap-3">
-        <Button
-          variant="flat"
-          color="warning"
-          onPress={() => onOpen()}
-          className="capitalize"
-        >
-          Open modal
-        </Button>
-      </div> */}
       <Modal
         backdrop="blur"
         placement="center"
@@ -50,17 +39,20 @@ const ProjectModal = ({ data, isOpen, onClose }: Props) => {
             <>
               <ModalHeader className="flex flex-col gap-1">
                 {data.title}
-                {data.link}
               </ModalHeader>
               <ModalBody>
+                <p className="border-b border-myprimary">Description</p>
                 <p>{data.description}</p>
+                <p className="flex items-start gap-4">
+                  {data.techStack.map((tech, i) => getIcon(tech, i))}
+                </p>
+                <Link href={data.link} target="_blank">
+                  {data.link}
+                </Link>
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
                   Close
-                </Button>
-                <Button color="primary" onPress={onClose}>
-                  Action
                 </Button>
               </ModalFooter>
             </>
