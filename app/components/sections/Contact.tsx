@@ -23,23 +23,20 @@ const Contact = () => {
       <h3 className="text-center mb-4">You can find me here</h3>
       <div className="flex items-center justify-center">
         <div className="flex items-center justify-center flex-col gap-2">
-          <Button>
-            <Tooltip
-              content="Click to go to google mail!"
-              className="bg-myprimary text-mytext"
-              placement="top-end"
-              closeDelay={200}
-            >
-              <Link href="https://mail.google.com/" target="_blank">
-                luduve97@gmail.com
-              </Link>
-            </Tooltip>
-          </Button>
-          <Button>
-            <Link href="https://github.com/treee97" target="_blank">
-              My github
+          <Tooltip
+            content="Click to go to google mail!"
+            className="bg-myprimary text-mytext"
+            placement="top-end"
+            closeDelay={200}
+          >
+            <Link href="https://mail.google.com/" target="_blank">
+              <Button>luduve97@gmail.com</Button>
             </Link>
-          </Button>
+          </Tooltip>
+
+          <Link href="https://github.com/treee97" target="_blank">
+            <Button>My github</Button>
+          </Link>
           <p className="text-center">
             You can get my <span className="text-myprimary underline">CV</span>{" "}
             and <span className="text-myprimary underline">Linkedin</span> by
