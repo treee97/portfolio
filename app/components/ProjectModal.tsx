@@ -10,6 +10,7 @@ import {
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 import getIcon from "../utils/getIcon";
+import Image from "next/image";
 
 interface Props {
   data: {
@@ -28,7 +29,7 @@ const ProjectModal = ({ data, isOpen, onClose }: Props) => {
     <>
       <Modal
         backdrop="blur"
-        placement="center"
+        placement="auto"
         isOpen={isOpen}
         onClose={onClose}
         className="m-4"
@@ -38,9 +39,17 @@ const ProjectModal = ({ data, isOpen, onClose }: Props) => {
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1">
-                {data.title}
+                <span className="text-myprimary underline">{data.title}</span>
               </ModalHeader>
-              <ModalBody>
+              <ModalBody className="">
+                <Image
+                  src={data.picture}
+                  alt="Project picture"
+                  objectFit="contain"
+                  width={900}
+                  height={700}
+                  className="w-full h-auto"
+                />
                 <p className="border-b border-myprimary">Description</p>
                 <p>{data.description}</p>
                 <p className="flex items-start gap-4">

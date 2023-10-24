@@ -22,7 +22,7 @@ const getIcon = (tech: string, i: number) => {
       return (
         <SiMongodb
           key={i}
-          className="text-green-500 dark:text-white p-1 text-4xl"
+          className="text-green-500 p-1 text-4xl"
           size={32}
           title="MongoDB"
         />
