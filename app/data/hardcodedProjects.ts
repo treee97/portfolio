@@ -10,7 +10,7 @@ const projects = [
     picture: "/assets/projects/fishit.png",
   },
   {
-    title: "Fishit.app",
+    title: "Rick & Morty",
     link: "https://fishit.vercel.app/",
     description:
       "Companion web where items purchased in the marketplace are automatically sent to the player's inventory in game through websockets technology",
