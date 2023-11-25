@@ -31,8 +31,8 @@ const ProjectCard = ({ data }: Props) => {
         src={data.picture}
         alt="project thumbnail"
         className="w-full h-auto border"
-        width={1600}
-        height={856}
+        width={1300}
+        height={756}
       />
 
       <ProjectModal data={data} isOpen={isOpen} onClose={onClose} />

@@ -29,28 +29,72 @@ const ProjectModal = ({ data, isOpen, onClose }: Props) => {
     <>
       <Modal
         backdrop="blur"
-        placement="auto"
+        placement="center"
         isOpen={isOpen}
         onClose={onClose}
         className="m-4"
-        size="4xl"
+        size="3xl"
       >
         <ModalContent>
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1">
-                <span className="text-myprimary underline">{data.title}</span>
+                <span className="text-myprimary">{data.title}</span>
               </ModalHeader>
               <ModalBody className="">
-                <Image
+                {/* <Image
                   src={data.picture}
                   alt="Project picture"
                   objectFit="contain"
                   width={900}
                   height={700}
                   className="w-full h-auto"
-                />
-                <p className="border-b border-myprimary">Description</p>
+                /> */}
+                <div className="grid grid-cols-3 gap-1">
+                  <div className="border border-red-600 col-span-2">
+                    <Image
+                      src={data.picture}
+                      alt="Project picture"
+                      objectFit="contain"
+                      width={900}
+                      height={700}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  {/* USE GRID AREA + Z-INDEX TO SET UP THE MAIN SCREEN WITH THE THOUGHTS FLOATING + FRAMER MOTION
+                  https://www.youtube.com/watch?v=EiNiSFIPIQE&t=38s
+                  */}
+                  <div className="border border-red-600 row-span-2">
+                    <Image
+                      src={data.picture}
+                      alt="Project picture"
+                      objectFit="cover"
+                      width={900}
+                      height={700}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  <div className="border border-red-600">
+                    <Image
+                      src={data.picture}
+                      alt="Project picture"
+                      objectFit="contain"
+                      width={900}
+                      height={700}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  <div className="border border-red-600">
+                    <Image
+                      src={data.picture}
+                      alt="Project picture"
+                      objectFit="contain"
+                      width={900}
+                      height={700}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
                 <p>{data.description}</p>
                 <p className="flex items-start gap-4">
                   {data.techStack.map((tech, i) => getIcon(tech, i))}

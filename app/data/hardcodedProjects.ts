@@ -11,10 +11,10 @@ const projects = [
   },
   {
     title: "Rick & Morty",
-    link: "https://fishit.vercel.app/",
+    link: "https://rickandmorty-hkt-j2d.vercel.app/",
     description:
-      "Companion web where items purchased in the marketplace are automatically sent to the player's inventory in game through websockets technology",
-    techStack: ["next.js", "typescript", "tailwind", "mongoDB"],
+      "App to search different character from the series Rick & Morty. I had to create this app to be able to participate in the Jump 2 Digital Hackathon 2023 in Barcelona. I used react query and filtered through the name of each character. Also used pagination with a Load More button but planning to use intersection observer because I want to be like the rest",
+    techStack: ["react", "typescript", "react query", "tailwind"],
     picture: "/assets/projects/fishit.png",
   },
   {
