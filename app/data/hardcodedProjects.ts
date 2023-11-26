@@ -13,7 +13,7 @@ const projects = [
     title: "Rick & Morty",
     link: "https://rickandmorty-hkt-j2d.vercel.app/",
     description:
-      "App to search different character from the series Rick & Morty. I had to create this app to be able to participate in the Jump 2 Digital Hackathon 2023 in Barcelona. I used react query and filtered through the name of each character. Also used pagination with a Load More button but planning to use intersection observer because I want to be like the rest",
+      "App to search different character from the series Rick & Morty. I had to create this app to be able to participate in the Jump 2 Digital Hackathon 2023 in Barcelona. I used react query and filtered through the name of each character. Also used pagination with a Load More button but planning to use intersection observer because it's cooler",
     techStack: ["react", "typescript", "react query", "tailwind"],
     picture: "/assets/projects/fishit.png",
   },
