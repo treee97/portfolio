@@ -7,8 +7,9 @@ const projects = [
     description:
       "Companion web where items purchased in the marketplace are automatically sent to the player's inventory in game through websockets technology. Currently a work in progress. Home page is fully responsive. ",
     techStack: ["Nextjs", "Typescript", "Tailwind", "MongoDB", "React"],
-    picture: "/assets/projects/fishit.png",
+    picture: "/assets/projects/project-1-fishit/fishit-dark.png",
   },
+  // create array of pictures. maybe import them here.
   {
     title: "Rick & Morty",
     link: "https://rickandmorty-hkt-j2d.vercel.app/",
