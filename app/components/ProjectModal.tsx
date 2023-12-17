@@ -7,6 +7,8 @@ import {
   ModalFooter,
 } from "@nextui-org/modal";
 
+import { useDisclosure } from "@nextui-org/modal";
+
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 import getIcon from "../utils/getIcon";
@@ -20,10 +22,9 @@ interface Props {
     techStack: string[];
     picture: string;
   };
-  onClose: () => void;
   isOpen: boolean;
+  onClose: () => void;
 }
-
 const ProjectModal = ({ data, isOpen, onClose }: Props) => {
   return (
     <>
@@ -32,8 +33,8 @@ const ProjectModal = ({ data, isOpen, onClose }: Props) => {
         placement="auto"
         isOpen={isOpen}
         onClose={onClose}
-        className=""
-        size="xl"
+        className="mt-"
+        size="3xl"
       >
         <ModalContent>
           {(onClose) => (
@@ -42,7 +43,7 @@ const ProjectModal = ({ data, isOpen, onClose }: Props) => {
                 <span className="text-myprimary">{data.title}</span>
               </ModalHeader>
               <ModalBody>
-                <div className="grid grid-cols-3 gap-1">
+                <div className="grid grid-cols-3 gap-1 ">
                   <div className="col-span-2">
                     <Image
                       src={data.picture}
@@ -50,7 +51,7 @@ const ProjectModal = ({ data, isOpen, onClose }: Props) => {
                       objectFit="contain"
                       width={900}
                       height={700}
-                      className="w-full h-auto rounded-lg"
+                      className=" h-auto rounded-lg"
                     />
                   </div>
                   {/* USE GRID AREA + Z-INDEX TO SET UP THE MAIN SCREEN WITH THE THOUGHTS FLOATING + FRAMER MOTION
@@ -86,7 +87,9 @@ const ProjectModal = ({ data, isOpen, onClose }: Props) => {
                     />
                   </div>
                 </div>
-                <p className="overflow-y-auto max-h-32">{data.description}</p>
+                <p className="overflow-y-auto max-h-72 lg:max-h-32">
+                  {data.description}
+                </p>
                 <p className="flex items-start gap-4">
                   {data.techStack.map((tech, i) => getIcon(tech, i))}
                 </p>
