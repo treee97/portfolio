@@ -43,7 +43,7 @@ const ProjectModal = ({ data, isOpen, onClose }: Props) => {
                 <span className="text-myprimary">{data.title}</span>
               </ModalHeader>
               <ModalBody>
-                <div className="grid grid-cols-3 gap-1 ">
+                <div className="grid grid-cols-3 gap-1 border">
                   <div className="col-span-2">
                     <Image
                       src={data.picture}
@@ -51,9 +51,14 @@ const ProjectModal = ({ data, isOpen, onClose }: Props) => {
                       objectFit="contain"
                       width={900}
                       height={700}
-                      className=" h-auto rounded-lg"
+                      className="w-full h-full object-fill rounded-lg"
                     />
                   </div>
+                  {/* En el mismo componente hacemos un map de pictures array.
+
+                  Si es % 2 == 0 => par entonces classname col-span-2
+                  Aumentar las pictures visibles a 5?*/}
+
                   {/* USE GRID AREA + Z-INDEX TO SET UP THE MAIN SCREEN WITH THE THOUGHTS FLOATING + FRAMER MOTION
                   https://www.youtube.com/watch?v=EiNiSFIPIQE&t=38s
                   */}
@@ -63,7 +68,7 @@ const ProjectModal = ({ data, isOpen, onClose }: Props) => {
                       alt="Project picture"
                       objectFit="cover"
                       fill
-                      className="w-full h-auto rounded-lg"
+                      className="w-full object-cover rounded-lg"
                     />
                   </div>
                   <div className="">
@@ -73,7 +78,7 @@ const ProjectModal = ({ data, isOpen, onClose }: Props) => {
                       objectFit="contain"
                       width={900}
                       height={700}
-                      className="w-full h-auto rounded-lg"
+                      className="w-full object-cover rounded-lg"
                     />
                   </div>
                   <div className="">
@@ -83,7 +88,7 @@ const ProjectModal = ({ data, isOpen, onClose }: Props) => {
                       objectFit="contain"
                       width={900}
                       height={700}
-                      className="w-full h-auto rounded-lg"
+                      className="w-full object-cover rounded-lg"
                     />
                   </div>
                 </div>

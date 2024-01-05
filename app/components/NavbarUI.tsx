@@ -37,6 +37,11 @@ const NavbarUI = () => {
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="end">
         <NavbarItem>
+          <Link className="text-mytext" href="#projects">
+            Projects
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
           <Link className="text-mytext" href="#about">
             {/* <Image
               src="/assets/icons/Home.svg"
@@ -45,14 +50,10 @@ const NavbarUI = () => {
               height={48}
               className="text-mytext"
             /> */}
-            About
+            About Me
           </Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link className="text-mytext" href="#projects">
-            Projects
-          </Link>
-        </NavbarItem>
+
         <NavbarItem>
           <Link className="text-mytext" href="#contact">
             Contact

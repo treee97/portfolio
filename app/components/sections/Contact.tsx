@@ -38,9 +38,9 @@ const Contact = () => {
             <Button>My github</Button>
           </Link>
           <p className="text-center">
-            You can get my <span className="text-myprimary underline">CV</span>{" "}
-            and <span className="text-myprimary underline">Linkedin</span> by
-            sending me an email!
+            You can get my <span className="text-myprimary">CV</span> and{" "}
+            <span className="text-myprimary">Linkedin</span> by sending me an
+            email!
           </p>
           <p className="text-mytext">
             This portfolio is not complete yet. Thanks for checking out.

@@ -45,14 +45,12 @@ const About = () => {
           <div className="w-80 m-8">
             <p className="mb-4">
               Hi I'm Luiggi! I'm a junior{" "}
-              <span className="text-myprimary underline">
-                Front End Developer
-              </span>{" "}
-              that fantasizes with becoming a Full Stack Developer.
+              <span className="text-myprimary">Front End Developer</span> that
+              fantasizes with becoming a Full Stack Developer.
             </p>
             <p>
               I like creating things. It feels truly great.{" "}
-              <span className="text-myprimary underline">Hire me</span>.
+              <span className="text-myprimary">Hire me</span>.
             </p>
           </div>
         </div>

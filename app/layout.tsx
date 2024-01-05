@@ -25,7 +25,6 @@ export default function RootLayout({
         className={`${inter.className} ${dogica.className}  text-text relative `}
       >
         <Providers>
-          {/* <Navbar /> */}
           <NavbarUI />
           <main
             className="
