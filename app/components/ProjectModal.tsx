@@ -43,7 +43,7 @@ const ProjectModal = ({ data, isOpen, onClose }: Props) => {
                 <span className="text-myprimary">{data.title}</span>
               </ModalHeader>
               <ModalBody>
-                <div className="grid grid-cols-3 gap-1 border">
+                <div className="grid grid-cols-3 gap-1 ">
                   <div className="col-span-2">
                     <Image
                       src={data.picture}
@@ -51,7 +51,7 @@ const ProjectModal = ({ data, isOpen, onClose }: Props) => {
                       objectFit="contain"
                       width={900}
                       height={700}
-                      className="w-full h-full object-fill rounded-lg"
+                      className="h-full w-full rounded-lg object-fill"
                     />
                   </div>
                   {/* En el mismo componente hacemos un map de pictures array.
@@ -62,13 +62,13 @@ const ProjectModal = ({ data, isOpen, onClose }: Props) => {
                   {/* USE GRID AREA + Z-INDEX TO SET UP THE MAIN SCREEN WITH THE THOUGHTS FLOATING + FRAMER MOTION
                   https://www.youtube.com/watch?v=EiNiSFIPIQE&t=38s
                   */}
-                  <div className="row-span-2 relative">
+                  <div className="relative row-span-2">
                     <Image
                       src={data.picture}
                       alt="Project picture"
                       objectFit="cover"
                       fill
-                      className="w-full object-cover rounded-lg"
+                      className="w-full rounded-lg object-cover"
                     />
                   </div>
                   <div className="">
@@ -78,7 +78,7 @@ const ProjectModal = ({ data, isOpen, onClose }: Props) => {
                       objectFit="contain"
                       width={900}
                       height={700}
-                      className="w-full object-cover rounded-lg"
+                      className="w-full rounded-lg object-cover"
                     />
                   </div>
                   <div className="">
@@ -88,11 +88,11 @@ const ProjectModal = ({ data, isOpen, onClose }: Props) => {
                       objectFit="contain"
                       width={900}
                       height={700}
-                      className="w-full object-cover rounded-lg"
+                      className="w-full rounded-lg object-cover"
                     />
                   </div>
                 </div>
-                <p className="overflow-y-auto max-h-72 lg:max-h-32">
+                <p className="max-h-72 overflow-y-auto lg:max-h-32">
                   {data.description}
                 </p>
                 <p className="flex items-start gap-4">

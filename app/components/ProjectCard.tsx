@@ -22,13 +22,18 @@ const ProjectCard = ({ data }: Props) => {
   return (
     <>
       <div
-        className="min-h-min min-w-full border-2 border-myprimary relative rounded-md cursor-pointer overflow-hidden hover:bg-black "
+        className="relative min-h-min min-w-full cursor-pointer overflow-hidden rounded-md border-2 border-myprimary"
         onClick={onOpen}
       >
+        <div className="absolute inset-0 opacity-70 hover:bg-black">
+          <span className="absolute bottom-0 left-0 p-2 text-white opacity-100">
+            {data.title}
+          </span>
+        </div>
         <Image
           src={data.cardPicture}
           alt="project thumbnail"
-          className="w-full h-auto border"
+          className="h-auto w-full border"
           width={1300}
           height={756}
         />
