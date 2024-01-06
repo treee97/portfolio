@@ -5,6 +5,8 @@ import {
   SiTailwindcss,
   SiReact,
   SiReactquery,
+  SiRedux,
+  SiPhp,
 } from "react-icons/si";
 // import { Tooltip } from "@nextui-org/tooltip";
 
@@ -62,6 +64,24 @@ const getIcon = (tech: string, i: number) => {
           className="bg-gradient-to-tr from-orange-500 to-pink-600 text-white rounded-md text-4xl"
           size={32}
           title="React Query"
+        />
+      );
+    case "redux":
+      return (
+        <SiRedux
+          key={i}
+          className="bg-gradient-to-tr from-purple-500 to-pink-600 text-white rounded-md text-4xl"
+          size={32}
+          title="React Query"
+        />
+      );
+    case "php":
+      return (
+        <SiPhp
+          key={i}
+          className=" text-blue-200 rounded-md text-4xl"
+          size={32}
+          title="PHP"
         />
       );
     default:
